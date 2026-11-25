@@ -2,7 +2,7 @@
 
 Proyecto Integrador 3 (Henry). Single Page Application responsive para chatear con personajes de Grand Theft Auto usando **Google Gemini**, a través de una **Vercel Serverless Function** que protege la API key.
 
-🔗 **App desplegada:** _pegá acá tu URL de Vercel_
+🔗 **App desplegada:** https://pi3-chat.vercel.app
 
 ## Los personajes
 
