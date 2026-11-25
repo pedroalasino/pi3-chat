@@ -1,3 +1,4 @@
+import { avatarHtml } from './personajes.js';
 // Lógica del chat: estado, historial en localStorage, llamada a la API y renderizado.
 
 import { validarMensaje, formatearHora, escaparHtml } from './utils.js';
@@ -85,7 +86,7 @@ export function montarChat(contenedor, personaje) {
   contenedor.innerHTML = `
     <section class="chat" style="--color-personaje: ${personaje.color}">
       <header class="chat__cabecera">
-        <span class="avatar" aria-hidden="true">${personaje.iniciales}</span>
+        ${avatarHtml(personaje)}
         <div class="chat__quien">
           <h1 class="chat__nombre">${personaje.nombre}</h1>
           <p class="chat__lugar">${personaje.juego} · ${personaje.lugar}</p>

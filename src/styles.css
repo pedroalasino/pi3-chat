@@ -225,6 +225,11 @@ main {
   background: var(--color-personaje, var(--mar));
 }
 
+.avatar--foto {
+  object-fit: cover;
+  border: 2px solid var(--color-personaje, var(--mar));
+}
+
 .avatar--grande {
   width: 64px;
   height: 64px;

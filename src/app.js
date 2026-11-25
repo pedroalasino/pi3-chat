@@ -1,6 +1,6 @@
 // Lógica principal: routing SPA con History API, vistas y modo claro/oscuro.
 
-import { PERSONAJES, PERSONAJE_POR_DEFECTO, buscarPersonaje } from './personajes.js';
+import { PERSONAJES, PERSONAJE_POR_DEFECTO, buscarPersonaje, avatarHtml } from './personajes.js';
 import { montarChat, cargarHistorial } from './chat.js';
 
 // ---------- Rutas ----------
@@ -34,7 +34,7 @@ function tarjetaPersonaje(p) {
   const tieneHistorial = cargarHistorial(p.id).length > 0;
   return `
     <article class="tarjeta" style="--color-personaje: ${p.color}">
-      <span class="avatar avatar--grande" aria-hidden="true">${p.iniciales}</span>
+      ${avatarHtml(p, 'avatar--grande')}
       <h2 class="tarjeta__nombre">${p.nombre}</h2>
       <p class="tarjeta__juego">${p.juego} · ${p.lugar}</p>
       <p class="tarjeta__desc">${p.descripcion}</p>

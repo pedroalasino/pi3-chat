@@ -8,6 +8,7 @@ export const PERSONAJES = [
     juego: 'GTA VI',
     lugar: 'Leonida · Vice City',
     iniciales: 'JD',
+    foto: '/personajes/jason.jpg',
     color: 'var(--color-jason)',
     frase: 'Pocas palabras, humor seco y leal hasta el final.',
     descripcion:
@@ -44,4 +45,13 @@ export const PERSONAJE_POR_DEFECTO = 'jason';
 
 export function buscarPersonaje(id) {
   return PERSONAJES.find((p) => p.id === id) ?? null;
+}
+
+// Avatar: foto si el personaje tiene, si no las iniciales.
+export function avatarHtml(personaje, clase = '') {
+  const clases = `avatar ${clase}`.trim();
+  if (personaje.foto) {
+    return `<img class="${clases} avatar--foto" src="${personaje.foto}" alt="" aria-hidden="true" width="64" height="64" />`;
+  }
+  return `<span class="${clases}" aria-hidden="true">${personaje.iniciales}</span>`;
 }
