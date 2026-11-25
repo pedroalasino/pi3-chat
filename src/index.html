@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chateá con Jason, Lucía y Niko de Grand Theft Auto usando inteligencia artificial." />
+    <title>Chat de personajes · GTA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="saltar" href="#app">Saltar al contenido</a>
+    <header class="barra">
+      <a class="marca" href="/home" data-link>
+        <span class="marca__sol" aria-hidden="true"></span>
+        Leonida Chat
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="/home" data-link data-vista="home">Inicio</a>
+        <a href="/personajes" data-link data-vista="personajes">Personajes</a>
+        <a href="/chat?personaje=jason" data-link data-vista="chat">Chat</a>
+        <a href="/about" data-link data-vista="about">About</a>
+      </nav>
+      <button class="tema" type="button" data-tema>Modo claro</button>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <footer class="pie">
+      Proyecto Integrador 3 · Pedro Alasino · Proyecto de fans sin relación con Rockstar Games
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
